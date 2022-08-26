@@ -429,7 +429,7 @@ a{
   text-align: left;
   font-family: var(--dotFont);
   font-weight: 400;
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: 0.1em;
   color: var(--mainColor);
 }
@@ -458,7 +458,7 @@ a{
   font-family: var(--titleFont);
   letter-spacing: 0.02em;
   font-weight: lighter;
-  font-size: 1em;
+  font-size: 0.9em;
   color: var(--mainColor4);
 }
 
@@ -1565,6 +1565,11 @@ cursor: pointer;
     text-align: right;
 }
 
+.couverture2 .paragraphe{
+  padding: 50px 50px 50px 10vw;
+
+}
+
 /*CARTO*/
 
 .white-popup .paratexte h1{
@@ -1747,7 +1752,7 @@ cursor: pointer;
 
     /* all images slideshow */
     .main .contenu .images .slideshow-container{
-      width: 78vw;
+      width: 85vw;
       position: relative;
     }
 
@@ -1794,7 +1799,7 @@ cursor: pointer;
 
     .main .contenu h3{
       font-size: 1.5em;
-      margin-left: 2vw;
+      /*margin-left: 2vw;*/
 
     }
 
@@ -1810,8 +1815,8 @@ cursor: pointer;
     }
 
     .main .contenu .paragraphe .abstract{
-        font-size: 1.5em;
-        line-height: 2.3em;
+        font-size: 1em;
+        line-height: 1.6em;
         margin: 0;
     }
 
