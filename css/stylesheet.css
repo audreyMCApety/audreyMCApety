@@ -1317,6 +1317,7 @@ cursor: pointer;
             /* visibility: hidden; */
             opacity: 0;
             transform: translateY(20px);
+            z-index: 0;
 
             transition: opacity 0.5s 0.1s ease-in-out,
                         transform 0.5s 0.1s ease-in-out;
@@ -1809,14 +1810,14 @@ cursor: pointer;
     }
 
     .main .contenu .paragraphe p{
-        font-size: 1em;
-        line-height: 1.6em;
+        font-size: 1.2em;
+        line-height: 1.5em;
         margin: 0;
     }
 
     .main .contenu .paragraphe .abstract{
-        font-size: 1em;
-        line-height: 1.6em;
+        font-size: 1.2em;
+        line-height: 1.5em;
         margin: 0;
     }
 
