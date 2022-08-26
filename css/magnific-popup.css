@@ -420,7 +420,8 @@ img.mfp-img {
     @media all and (max-width: 800px) {
 
       .mfp-bg.table {
-        background-size: 90vw;
+        /*background-size: 90vw;*/
+        background: linear-gradient(#fff6f2, #fff6f2), no-repeat;
       }
 
     }

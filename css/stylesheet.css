@@ -1492,10 +1492,15 @@ cursor: pointer;
 
 @media screen and (max-width: 800px){
   .white-popup .fanion-container{
-    width:90%;
+    width:99%;
     /*padding-bottom:100%;*/
     /*vertical-align: middle;*/
     /*margin: auto 0;*/
+/*supper quickfix si la carto du fond n'est pas calée ci-dessous;*/
+    background: url("../img/carto-recherche4.png") no-repeat;
+    background-size: 85%;
+    background-position: center;
+    background-attachment: fixed;
   }
 }
 /* CARTO ------------------------------------------ */
