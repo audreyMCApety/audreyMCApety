@@ -1,0 +1,567 @@
+/* feuille de style dédiée à l'impression. Utiliser de préférence chorme et attendre quelques minutes de sortes que tous les graphiques soient chagés ; cocher afficher les graphiques d'arrière plan */
+/*si certaines pages html s'impriment avec une trop grande échelle c'est qu'il leur manque dans le code html la couverture*/
+@page {
+ size:21cm 29.7cm;
+ margin: 2cm 2cm 2cm 2cm; /*ca ne marche pas dans safari qui fait des marges étriquées en haut*/
+ position: relative;
+}
+
+/* @page :left{
+  margin:0mm 15mm 0mm 0mm;
+}
+@page :right{
+  margin: 0mm 0mm 0mm 15mm;
+} */
+
+@page :first {
+ size:21cm 29.7cm;
+ margin: 2cm 2cm 2cm 2cm;
+}
+
+@page :left{
+  margin: 2cm 5cm 2mm 1cm;
+    }
+@page :right{
+  margin: 2cm 1cm 2cm 5cm;
+    }
+
+
+html, body{
+  width:100%;
+  height:100%;
+
+  background-color: var(--backColor);
+
+  overflow: visible; /*censer empecher de couper abruptment aux marges*/
+
+  /* Couleurs */
+  --mainColor : rgb(13, 13, 13);
+  --mainColor2 : rgb(36, 36, 36);
+  --mainColor3 : rgb(94, 94, 94);
+  --mainColor4 : rgb(103, 103, 103);
+  --suppColor : rgb(120, 118, 117);
+  --suppColor2 : rgb(134, 134, 134);
+  --backColor : rgb(255, 255, 255);
+  --backColor2 : rgba(255, 255, 255, 0.85);
+  --backColor3 : rgba(255, 255, 255, 0.96);
+
+  /* Polices */
+  --titleFont : 'Autopia regular', serifs;
+  --textFont : 'Roboto', sans-serif;
+  --dotFont : 'Codystar', cursive;
+  }
+
+
+.pagebreak {
+  page-break-after: always;
+  break-after: always;
+}
+
+
+  /* NAV BAR qui devient le SOMMAIRE ----------------------*/
+
+  /*.main nav{
+      display:none !important;
+  }*/
+
+  .main nav{
+      position: relative;
+      display: block;
+      z-index: 20;
+      width: 16cm;
+      left: 2cm;
+      right:0.01cm;
+      page-break-inside: auto;
+      orphans: 2;
+  }
+  .main nav .menu{
+      position: relative;
+      left: 0;
+      top: 0%;
+      height: auto;
+      margin-top: 0px;
+      margin-left: 0px;
+      padding: 0;
+      list-style: none;
+      z-index: 20;
+      display: block;
+      max-width: 16cm;
+  }
+
+  .main nav .menu .picto[data-title]:hover::before{
+    display: none;
+  }
+
+  .main nav .menu a, .main nav .menu li .sous-menu a{
+    font-size: 0.9em;
+    page-break-inside: auto;
+    orphans: 2;
+  }
+
+  .main nav .menu .sous-menu.sm-inactive{
+      display:block;
+    }
+
+ .main nav .menu .imprimer a{
+   visibility: hidden;
+ }
+
+  /* QR code */
+ /*.main nav .menu .imprimer::after{
+   display: block;
+   height: 2cm;
+   page-break-inside: avoid;
+   left:0;
+   top:2cm;
+   background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('../img/qr-code-mdb.png') no-repeat;
+   background-size: contain;
+   background-position: left;
+ }*/
+
+ .main nav .menu .imprimer::before{
+   position: relative;
+   display: block;
+   margin-top: 1cm;
+   margin-left: 2cm;
+   content: "Consultez les images sur le site millefeuillesdebabel.ensci.com en vous référant au numéro de figure corespondant. Les mots signalés avec une astérisque renvoient au glossaire, imprimable en ligne également. Les notes sont disponibles à la fin du chapitre.";
+   font-family: var(--titleFont);
+   font-style: italic;
+   letter-spacing: 0.05em;
+   color: var(--mainColor3);
+   page-break-inside: auto;
+   orphans: 2;
+ }
+
+    /* POPUP ----------------------*/
+
+  .carto{
+    display: none;
+  }
+
+  /* MAIN ----------------------*/
+
+  .haut{
+    page-break-before: always;
+    page-break-after: always;
+  }
+  /*.main .contenu{
+      width: 16cm;
+      left: 7cm;
+      page-break-inside: auto;
+      break-inside: auto;
+      orphans: 2;
+    }*/
+    .main .contenu{
+        width: 16cm;
+        left: 2cm;
+        right:0.01cm;
+        page-break-inside: auto;
+        break-inside: auto;
+        orphans: 2;
+      }
+
+
+/* Imprimer tout le texte de la section et pas seulement la sous-partie active*/
+    body .main .contenu .inactive{
+    display: block;
+    }
+    body .main .contenu .inactive.active{
+    display: block;
+    }
+
+
+  /* all images slideshow */
+
+
+  .main .contenu .images .slideshow-container{
+      display: none;
+    }
+
+  .main .contenu .images .slideshow-container .dot{
+      display: none;
+    }
+
+  .main .contenu .legende-compt, .main .contenu .total{
+      visibility: hidden;
+      }
+
+  .main .contenu .total{
+      counter-reset: cTotal var(--Total);
+    }
+
+/* Ne pas imprimer le popup
+.mfp-wrap {
+  display:none !important;
+
+
+  #index-print{
+    display:block;
+    width: 100%;
+  }
+
+  .index-part{
+    display: inline-block;
+    vertical-align: top;
+    float:none;
+    margin-top: 0.5cm;
+  }
+
+  #index-print .index-part{
+    width:7cm;
+    height:100%;
+    font-size:10px;
+  }
+
+  #index-print .part-img{
+    width:80%;
+    height:100%;
+  }
+
+  #index-print h1{
+    font-size:17px;
+    letter-spacing:4px;
+    text-decoration: none;
+    font-family:'autopia';
+    text-align:left;
+    border:none;
+    margin:0 0 0 0;
+    padding:0px;
+    display:block;
+    line-height:100%;
+  }
+    */
+
+    .couverture, .couverture2{
+      page-break-after: always; /*pour une raison inconnue ca marche pas bien */
+      border: none;
+    }
+
+    .couverture{
+      top: 0cm;
+      left:3cm;
+
+      background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), url('../img/ILL-map-black.png') no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+
+    #background-video{
+      display: none;
+    }
+
+    .couverture h1.main-title{
+      margin-top: 40vh;
+      width: 100vw;
+      margin-left: 10%;
+    }
+
+    .couverture h2.subtitle{
+      margin-left: 13%;
+      margin-top: 0.5em;
+    }
+
+    .couverture p.author{
+      display: inline-block;
+      width: 100vw;
+      margin-top: 45vh;
+
+      text-align: center;
+      font-family: var(--titleFont);
+      letter-spacing: 0.02em;
+      font-weight: lighter;
+      font-size: 1em;
+      color: var(--mainColor4);
+    }
+
+    .couverture2 .paragraphe{
+      margin-right: 1mm;
+      width: 15cm;
+      padding: 0px 0px 0px 0px;
+      width: 16cm;
+      left: 2cm;
+      right:0.01cm;
+    }
+
+
+
+    /*TEXTE PRINCIPAL*/
+
+    .main .contenu h1.chapitre{
+      margin-top: 0px;
+      padding-top: 0px;
+      page-break-before: always;
+      page-break-inside: avoid;
+    }
+
+    .main .contenu h2{
+      page-break-before: always;
+      page-break-inside: avoid;
+      color: var(--mainColor3);
+      padding-top: 20px;
+    }
+
+    .main .contenu h2.no-topmarg{
+      page-break-before: avoid;
+      page-break-inside: avoid;
+      color: var(--mainColor3);
+    }
+
+
+    .main .contenu h3{
+      position: relative;
+      display: block;
+      page-break-inside: avoid;
+      page-break-after: avoid;
+      font-size: 14pt;
+      padding: 25px 0px 15px;
+    }
+
+    h3::before {
+        counter-increment: cSection; /* On incrémente le compteur de parties */
+        content: counter(cSection) " / " counter(cTotal); /* On affiche le compteur de parties + le nb total de parties*/
+        margin-left: -2cm;
+        margin-right: 0.5cm;
+        text-align: right;
+        }
+
+
+
+    .main .contenu h3::after { /* pour éviter un h3 tout seul en bas de la page...*/
+      content: "";
+      display: block;
+      page-break-inside: avoid;
+      height: 6cm;
+      margin-bottom: -6cm;
+    }
+
+    .main .contenu h4{
+      position: relative;
+      display: block;
+      page-break-inside: avoid;
+      page-break-after: avoid;
+      font-size: 13pt;
+      padding-top: 25px;
+    }
+
+    .main .contenu h4::after {
+      content: "";
+      display: block;
+      page-break-inside: avoid;
+      height: 4cm;
+      margin-bottom: -4cm;
+    }
+
+    .main .contenu .paragraphe h4{
+      position: relative;
+      page-break-inside: avoid;
+      page-break-after: avoid;
+    }
+
+    .main .contenu h5{
+      position: relative;
+      page-break-inside: avoid;
+      page-break-after: avoid;
+      padding-top: 25px;
+    }
+
+    .main .contenu h6{
+      position: relative;
+      page-break-inside: avoid;
+      page-break-after: avoid;
+      font-size: 11pt;
+    }
+
+    .main .contenu .paragraphe{
+      position: relative;
+      display: block;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+
+    .main .contenu p{
+        /*text-indent: 30px;*/
+        display: inline-block;
+        vertical-align: left;
+        font-family: var(--textFont);
+        font-weight: 300;
+        line-height: 150%;
+        color: var(--mainColor);
+        font-size: 13pt;
+    }
+
+    .abstract{
+      position: relative;
+      display: block;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+
+    .abstract p{
+      page-break-inside: auto;
+      break-inside: auto;
+      orphans: 3;
+      widows: 3;
+    }
+
+    .main .contenu .paragraphe p, .main .contenu .paragraphe .abstract p{
+      position: relative;
+      display: block;
+      page-break-inside: auto;
+      break-inside: auto;
+      orphans: 3;
+      widows: 3;
+    }
+
+    .abstract em{
+      page-break-inside: auto;
+      orphans: 3;
+      widows: 3;
+    }
+
+    .main .contenu .paragraphe q, .main .contenu .paragraphe em{
+      page-break-inside: auto;
+    }
+
+    .main .contenu .paragraphe .illustration{
+      page-break-inside: avoid;
+      break-inside: avoid;
+      overflow: visible;
+    }
+
+    /*lien vers les illustration en noir*/
+    #ILL-belvedere{ content: url('../img/Ill-belvedere-black.png')}
+    #ILL-plot{ content: url('../img/Ill-plot-black.png')}
+    #BEL-numbers{ content: url('../img/BEL-numbers-black.png')}
+    #loop{ display : none}
+    #loop2{ display : none}
+    #ILL-map{ content: url('../img/ILL-map-black.png')}
+    #ILL-sable{ content: url('../img/ILL-sable-black.png')}
+    #ILL-millefeuille{ content: url('../img/ILL-millefeuille-black.png')}
+    #ILL-tableau{ content: url('../img/ILL-tableau-black.png')}
+
+    /*lien vers les pictos en noir*/
+    #picto-belvedere{ content: url('../img/picto-belvedere-black.png')}
+    #picto-sphere{ content: url('../img/picto-sphere-black.png')}
+    #picto-calque{ content: url('../img/picto-calque-black.png')}
+    #picto-coll{ content: url('../img/picto-coll-black.png')}
+    #picto-reseau{ content: url('../img/picto-reseau-black.png')}
+    #picto-panorama{ content: url('../img/picto-pano-black.png')}
+    #picto-page{ content: url('../img/picto-page-black.png')}
+    #picto-corpus{ content: url('../img/picto-corpus-black.png')}
+
+    #lien-association{
+      content: url('../img/lien-association-black.png');
+      display: block;
+    }
+    #lien-evolution{
+      content: url('../img/lien-evolution-black.png');
+      display: block;
+    }
+    #lien-force{
+      content: url('../img/lien-force-black.png');
+      display: block;
+    }
+    #lien-generation{
+      content: url('../img/lien-generation-black.png');
+      display: block;
+    }
+    #lien-interface{
+      content: url('../img/lien-interface-black.png');
+      display: block;
+    }
+    #lien-rapport{
+      content: url('../img/lien-rapport-black.png');
+      display: block;
+    }
+    #lien-trajectoire{
+      content: url('../img/lien-trajectoire-black.png');
+      display: block;
+    }
+
+
+  /*liens --------------------*/
+
+  .lien-ext{
+      color: var(--mainColor);
+      text-decoration: none;
+      border-bottom: dotted;
+      border-color: var(--mainColor3);
+      border-width: 0.6px;
+  }
+
+  .lien-ext-contenu{
+      color: var(--mainColor);
+      border-bottom: dotted;
+      border-color: var(--mainColor3);
+      border-width: 0.6px;
+  }
+
+  /* square pour les images----------------------------- */
+    .square::after{
+      content: "[ " attr(data-title) " ]";
+      white-space: nowrap;
+      color: var(--mainColor4);
+    }
+
+  /* afficher le texte caché des fiches*/
+
+  .fiche p.texte-fiche{
+      display: block;
+      font-size: 10pt;
+  }
+
+  .ref-fiche{
+      display: none;
+  }
+
+
+/* footer ndbp */
+  .main .contenu .bas-page{
+      page-break-inside: auto;
+      display: block;
+  }
+
+  .main .contenu .bas-page ol{
+      page-break-inside: auto;
+      display: block;
+  }
+
+  .main .contenu .bas-page ol li{
+        page-break-inside: avoid;
+        display: block;
+  }
+
+  .main .contenu .bas-page ol li p{
+        page-break-inside: avoid;
+        display: block;
+  }
+
+  .trait-ndbp-sgstn{
+      border-bottom: solid 1px var(--suppColor);
+      display: block;
+    }
+
+.trait-ndbp-sgstn::after{ /* pour éviter que le trait soit seul en bas d'une page*/
+    content: "";
+    display: block;
+    page-break-inside: avoid;
+    height: 8em;
+    margin-bottom: -8em;
+  }
+
+    .main .contenu .nbp-main:after{
+        counter-increment: cIntro;
+        content: "\0000A0" counter(cIntro);
+            vertical-align: 0.4em;
+
+            color: var(--suppColor);
+            font-family: var(--titleFont);
+            font-weight: bolder;
+            font-size: 0.6em;
+      }
+
+
+  .nbp-second.nbp-active{
+          opacity: 0;
+        }
