@@ -428,7 +428,17 @@ img.mfp-img {
     transform-origin: 100%; }
   /*.mfp-container {
     padding-left: 6px;
-  padding-right: 6px; }*/ }
+  padding-right: 6px; }*/
+
+  .mfp-close {
+   background:url('../img/dotted-gradient-green2.png') no-repeat;
+   width:50px;}
+
+   .mfp-bg.table{
+     height: 100vh;
+     overflow: hidden;
+   }
+ }
 
 .mfp-ie7 .mfp-img {
   padding: 0; }
