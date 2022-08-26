@@ -1490,14 +1490,17 @@ cursor: pointer;
 
 /*  MEDIA QUERY  -------------------------------------------------------------------------------------*/
 
-/* CARTO ------------------------------------------ */
-@media screen and (max-width: 700px), screen and (orientation:portrait){
+@media screen and (max-width: 800px){
   .white-popup .fanion-container{
-    width:100%;
+    width:90%;
     /*padding-bottom:100%;*/
     /*vertical-align: middle;*/
     /*margin: auto 0;*/
   }
+}
+/* CARTO ------------------------------------------ */
+@media screen and (max-width: 700px), screen and (orientation:portrait){
+
 
   .carto{
     background-size: contain;  /* QUICKFIX pour empécher la bordure pointllée blanche d'apparaitre tronquée >> Mais pourquoi la bordure verte de droite elle n'a pas ce problème alors qu'elle est paramétrée similairement ?*/
@@ -1529,13 +1532,7 @@ cursor: pointer;
 }
 
 /* CARTO ------------------------------------------ */
-@media screen and (max-width: 700px) and (min-height: 80vw){
-  .white-popup .fanion-container{
-    width:100%;
-    /*padding-bottom:100%;*/
-    /*vertical-align: middle;*/
-    /*margin: auto 0;*/
-  }
+@media screen and (max-width: 700px){
 
   .carto{
     background-size: contain;  /* QUICKFIX pour empécher la bordure pointllée blanche d'apparaitre tronquée >> Mais pourquoi la bordure verte de droite elle n'a pas ce problème alors qu'elle est paramétrée similairement ?*/
@@ -1566,30 +1563,30 @@ cursor: pointer;
 /*CARTO*/
 
 .white-popup .paratexte h1{
-  font-size:1.5em;
+  font-size:1em;
   letter-spacing:0.5em;
       }
 
 .white-popup .paratexte:hover a{
-  font-size:1.7em;
+  font-size:1.1em;
 }
 
 .white-popup .paratexte:hover h1{
-  font-size:1.7em;
+  font-size:1.1em;
 }
 
 .white-popup .fanion-container .fanion h1{
-  font-size:1.5em;
+  font-size:0.5em;
   letter-spacing:01px;
 }
 
 .white-popup .fanion-container .fanion h2{
-  font-size:1.2em;
+  font-size:0.4em;
 }
 
 .white-popup .fanion-container .fanion:hover h1{
-  font-size:1.7em;
-  letter-spacing:01px;
+  font-size:1.1em;
+  letter-spacing:0.5px;
 }
 
 .white-popup .fanion-container .fanion:hover h2{
@@ -1598,7 +1595,13 @@ cursor: pointer;
 }
 
 .carto{
-  width: 50px;}
+  width: 50px;
+}
+
+.carto p{
+  font-size: 1em;
+  margin-left:-130px;
+}
 
 .square:hover .figblock .fig-legende{
   display: inline-flex;
@@ -1630,8 +1633,36 @@ cursor: pointer;
 
 }
 
+@media screen and (max-width: 550px){
 
-@media screen and (max-width: 1000px){
+
+  #topleft{
+    position: absolute;
+    top: 2em;
+    width: 100%;
+    text-align: center;
+  }
+  #topright{
+    position: absolute;
+    width: 100%;
+    top: 5em;
+    text-align: center;
+  }
+ #bottomleft{
+    position: absolute;
+    width: 100%;
+    top:82vh;
+     text-align: center;
+  }
+  #bottomright{
+    position: absolute;
+    width: 100%;
+    top:91vh;
+    text-align: center;
+}
+}
+
+@media screen and (max-width: 700px){
 
 
     /* CONTENU ------------------------------------------ */
@@ -1647,7 +1678,7 @@ cursor: pointer;
     }
 
     .nbp-second{
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
 
@@ -1674,7 +1705,7 @@ cursor: pointer;
 
      .main nav .menu li a{
        width : 70vw;
-         font-size: 1.3em;
+      font-size: 1em;
      }
      .main nav .menu .active a{
          font-size: 1.3em;

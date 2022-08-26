@@ -375,7 +375,7 @@ img.mfp-img {
 .mfp-gallery .mfp-image-holder .mfp-figure {
   cursor: pointer; }
 
-@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+@media screen and (max-width: 700px) and (orientation: landscape), screen and (max-height: 300px) {
   /**
        * Remove all paddings around the image on small screen
        */
@@ -416,7 +416,16 @@ img.mfp-img {
     text-align: center;
     padding: 0; } }
 
-@media all and (max-width: 900px) {
+    @media all and (max-width: 800px) {
+
+      .mfp-bg.table {
+        background-size: 90vw;
+      }
+
+    }
+
+@media all and (max-width: 700px) {
+
   .mfp-arrow {
     -webkit-transform: scale(0.75);
     transform: scale(0.75); }
@@ -430,13 +439,17 @@ img.mfp-img {
     padding-left: 6px;
   padding-right: 6px; }*/
 
-  .mfp-close {
-   background:url('../img/dotted-gradient-green2.png') no-repeat;
-   width:50px;}
+  .mfp-close{
+    padding-left: 10px;
+    text-align: center;
+    font-size: 1em;
+  }
 
-   .mfp-bg.table{
+
+   .mfp-bg .table .mfp-ready{
      height: 100vh;
      overflow: hidden;
+     background-position: center;
    }
  }
 
