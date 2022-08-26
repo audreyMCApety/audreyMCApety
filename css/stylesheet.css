@@ -1605,7 +1605,7 @@ cursor: pointer;
 
 .carto p{
   font-size: 1em;
-  margin-left:-130px;
+  margin-left:-140px;
 }
 
 .square:hover .figblock .fig-legende{
@@ -1740,7 +1740,7 @@ cursor: pointer;
     /* TEXTE CENTRAL -------------------------------------------- */
     .main .contenu {
         width : 80vw;
-        padding: 6vw;
+        padding: 6vw 1vw 6vw 9vw;
         left: 7vw;
         margin: 0;
     }
@@ -1774,7 +1774,7 @@ cursor: pointer;
     /*content */
     .main .contenu h1{
         /* padding-top: 10px; */
-        font-size: 4em;
+        font-size: 3.2em;
         line-height: 5rem;
     }
     .main .contenu .souligne-titre{
@@ -1788,7 +1788,7 @@ cursor: pointer;
     .main .contenu h2{
         position: relative;
         top: 0vh;
-        font-size: 3em;
+        font-size: 2.2em;
         padding: 40px 0px;
     }
 
@@ -1804,8 +1804,8 @@ cursor: pointer;
     }
 
     .main .contenu .paragraphe p{
-        font-size: 1.5em;
-        line-height: 2.3em;
+        font-size: 1em;
+        line-height: 1.6em;
         margin: 0;
     }
 
@@ -1823,7 +1823,7 @@ cursor: pointer;
       width:85vw;
         display: inline-block;
         z-index: 10;
-        padding: 2vw;
+        padding: 2vw 5vw 2vw 10vw;
       }
         /*top: auto;
         bottom: 0;
