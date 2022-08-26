@@ -1567,6 +1567,43 @@ cursor: pointer;
         font-size: 1.1em;
     }
 
+    /*CARTO*/
+
+    .white-popup .paratexte h1{
+      font-size:2em;
+      letter-spacing:0.5em;
+          }
+
+    .white-popup .paratexte:hover a{
+      font-size:2.5em;
+    }
+
+    .white-popup .paratexte:hover h1{
+      font-size:2.5em;
+    }
+
+    .white-popup .fanion-container .fanion h1{
+      font-size:1.5em;
+      letter-spacing:01px;
+    }
+
+    .white-popup .fanion-container .fanion h2{
+      font-size:1.2em;
+    }
+
+    .white-popup .fanion-container .fanion:hover h1{
+      font-size:1.7em;
+      letter-spacing:01px;
+    }
+
+    .white-popup .fanion-container .fanion:hover h2{
+      font-size:1.5em;
+      letter-spacing:01px;
+    }
+
+
+
+
     /* MENU NAV ----------- ---------------------------------*/
     .main nav{
       width : 80vw;
