@@ -1032,7 +1032,7 @@ cursor: pointer;
         }
 
         /*lien vers les illustration en blanc*/
-        #ILL-belvedere{ content: url('../img/Ill-belvedere.png')}
+        #ILL-belvedere{ content: url('../img/ILL-belvedere.png')}
         #ILL-plot{ content: url('../img/ILL-plot.png')}
         #BEL-numbers{ content: url('../img/BEL-numbers.gif')}
         #ILL-map{ content: url('../img/ILL-map.png')}
