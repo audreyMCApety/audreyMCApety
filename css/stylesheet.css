@@ -1493,6 +1493,44 @@ cursor: pointer;
             display: none;
         }
 
+        .main .contenu .suivant{
+          text-decoration: none;
+          display: none;
+          margin-top: 10vh;
+          font-family: var(--titleFont);
+          font-weight: normal;
+          letter-spacing: 0.1em;
+          font-size: 1.2em;
+          color: var(--mainColor2);
+          cursor: pointer;
+          margin-bottom: 10vh;
+          padding: 1em;
+
+          border: 1px 0 0 0;
+          border-width: 1px 0 0 0;
+          border-style: dotted;
+          border-color: var(--mainColor2);
+          align-items: center;
+          text-align: center;
+        }
+
+        .main .contenu .suivant .fleche2{
+          position: relative;
+          height: 1.2em;
+          margin-top: 1em;
+        }
+
+        .main .contenu .suivant a{
+          text-decoration: none;
+          color: var(--mainColor2);
+        }
+
+        .main .contenu .suivant a:hover{
+          text-decoration: none;
+          color: var(--suppColor2);
+        }
+
+
 
 /*  MEDIA QUERY  -------------------------------------------------------------------------------------*/
 
@@ -1895,6 +1933,10 @@ cursor: pointer;
     }
     .main .contenu .bas-page ol li::before{
         font-size: 0.9em;
+    }
+
+    .main .contenu .suivant{
+      display: block;
     }
 
 }
