@@ -1188,6 +1188,9 @@ cursor: pointer;
             content: '■';
             color: var(--suppColor);
             font-weight: bolder;
+            cursor: pointer;
+            pointer-events: all;
+
         }
 
         .square .figblock{
