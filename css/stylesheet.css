@@ -95,6 +95,7 @@ a{
   #topleft{
     position: absolute;
     top: 5%;
+    left: 2%;
   }
   #topright{
     position: absolute;
@@ -106,6 +107,7 @@ a{
     position: absolute;
     bottom: 5%;
     text-align: left;
+    left: 2%;
   }
   #bottomright{
     position: absolute;
@@ -224,8 +226,8 @@ a{
     text-decoration: none;
     display: block;
     position: absolute;
-    bottom: 54%;
-    left: 47%;
+    bottom: 56%;
+    left: 43%;
 
     pointer-events: visible;
   }
@@ -233,8 +235,8 @@ a{
     text-decoration: none;
     display: block;
     position: absolute;
-    bottom: 50%;
-    left: 57%;
+    bottom: 52%;
+    left: 56%;
 
     pointer-events: visible;
   }
@@ -243,7 +245,7 @@ a{
     display: block;
     position: absolute;
     bottom: 44%;
-    left: 49.5%;
+    left: 47.5%;
 
     pointer-events: visible;
   }
@@ -253,7 +255,7 @@ a{
     display:flex;
     position: absolute;
     bottom: 48%;
-    left: 15%;
+    left: 10%;
     /*bottom: 59%;
     left: 27%;*/
   }
@@ -262,28 +264,28 @@ a{
     display:flex;
     position: absolute;
     bottom: 22%;
-    left: 47%;
+    left: 49%;
   }
   .white-popup .fanion-container .coll{
     text-decoration: none;
     display:flex;
     position: absolute;
-    bottom: 47%;
-    left: 78%;
+    bottom: 49%;
+    left: 73%;
   }
   .white-popup .fanion-container .pano{
     text-decoration: none;
     display:flex;
     position: absolute;
-    bottom: 71%;
-    left: 48%;
+    bottom: 72%;
+    left: 46%;
   }
   .white-popup .fanion-container .corpus{
     text-decoration: none;
     display:flex;
     position: absolute;
     bottom: 32%;
-    left: 74%;
+    left: 75%;
 
   }
   .white-popup .fanion-container .page{
@@ -291,7 +293,7 @@ a{
     display:flex;
     position: absolute;
     bottom: 27%;
-    left: 24%;
+    left: 19%;
   }
 
 /* si besoin de détails*/
@@ -421,30 +423,30 @@ a{
 
 .couverture h1.main-title{
   display: inline-block;
-  margin-top: 20vh;
+  margin-top: 27vh;
   margin-bottom: 0px;
   width: 100vw;
-  margin-left: 30%;
+  margin-left: 25%;
 
   text-align: left;
   font-family: var(--dotFont);
   font-weight: 400;
-  font-size: 2em;
+  font-size: 8vh;
   letter-spacing: 0.1em;
   color: var(--mainColor);
 }
 
 .couverture h2.subtitle{
   display: inline-block;
-  margin-left: 33%;
+  margin-left: 50%;
   margin-top: 0.5em;
 
-  text-align: left;
+  text-align: right;
   font-family: var(--titleFont);
   font-weight: normal;
   font-style: italic;
   letter-spacing: 0.05em;
-  font-size: 1.3em;
+  font-size: 3vh;
   line-height: 140%;
   color: var(--mainColor3);
 }
@@ -452,7 +454,7 @@ a{
 .couverture p.author{
   display: inline-block;
   width: 100vw;
-  margin-top: 20vh;
+  margin-top: 15vh;
 
   text-align: center;
   font-family: var(--titleFont);
@@ -1534,6 +1536,7 @@ cursor: pointer;
 
 /*  MEDIA QUERY  -------------------------------------------------------------------------------------*/
 
+
 @media screen and (max-width: 800px){
   .white-popup .fanion-container{
     width:99%;
@@ -1576,6 +1579,11 @@ cursor: pointer;
     top:90vh;
     right: 0%;
     text-align: right;
+  }
+
+  .couverture h1.main-title{
+    font-size: 7vw;
+    margin-left: 18%;
   }
 
 }
@@ -1665,14 +1673,19 @@ cursor: pointer;
 .couverture h1.main-title{
   margin-left:0;
   text-align: center;
-
+    font-size: 8vw;
 }
 .couverture h2.subtitle{
   margin-left:0;
   margin-right: 0;
-  margin-top: 0.5em;
+  margin-top: 4vh;
   text-align: center;
   width: 100vw;
+  font-size: 4vw;
+}
+
+.couverture p.author{
+  margin-top: 18vh;
 }
 
 /*#background-video {
@@ -1938,5 +1951,23 @@ cursor: pointer;
     .main .contenu .suivant{
       display: block;
     }
+
+}
+
+@media screen and (max-height: 700px) and (orientation: landscape){
+  .couverture h1.main-title{
+    font-size: 10vh;
+    margin-top: 18vh;
+
+  }
+
+  .couverture h2.subtitle{
+    font-size: 4vh;
+  }
+
+  .couverture p.author{
+    margin-top: 4vh;
+    font-size: 3vh;
+  }
 
 }
