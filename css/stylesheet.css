@@ -118,7 +118,7 @@ a{
 
 .white-popup .fanion-container{
   position: relative;
-  /*vertical-align: middle;*/
+  vertical-align: middle; /*normalement désactivé*/
   align: center;
   width:90vh;/*c'est là que se joue la taille de la zone des fanions qui doit être calquée sur celle de l'image de fond en largeur (pour la hauteur, voir dans les variables @mediascreen)*/
   height: 100vh;
