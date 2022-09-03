@@ -13,15 +13,15 @@
   margin: 0mm 0mm 0mm 15mm;
 } */
 
-@page :first {
+@page:first {
  size:21cm 29.7cm;
  margin: 2cm 2cm 2cm 2cm;
 }
 
-@page :left{
+@page:left{
   margin: 2cm 5cm 2mm 1cm;
     }
-@page :right{
+@page:right{
   margin: 2cm 1cm 2cm 5cm;
     }
 
@@ -68,8 +68,8 @@ html, body{
       position: relative;
       display: block;
       z-index: 20;
-      width: 16cm;
-      left: 2cm;
+      width: 15cm;
+      left: 1cm;
       right:0.01cm;
       page-break-inside: auto;
       orphans: 2;
@@ -152,7 +152,7 @@ html, body{
       orphans: 2;
     }*/
     .main .contenu{
-        width: 16cm;
+        width: 14.5cm;
         left: 2cm;
         right:0.01cm;
         page-break-inside: auto;
@@ -254,17 +254,20 @@ html, body{
       margin-top: 40vh;
       width: 100vw;
       margin-left: 10%;
+      font-size: 3em;
     }
 
     .couverture h2.subtitle{
-      margin-left: 13%;
+      margin-left: 16%;
       margin-top: 0.5em;
+      text-align: left;
+      font-size: 1.5em;
     }
 
     .couverture p.author{
       display: inline-block;
       width: 100vw;
-      margin-top: 45vh;
+      margin-top: 25vh;
 
       text-align: center;
       font-family: var(--titleFont);
@@ -485,9 +488,9 @@ html, body{
   .lien-ext{
       color: var(--mainColor);
       text-decoration: none;
-      border-bottom: dotted;
+    /*  border-bottom: dotted;
       border-color: var(--mainColor3);
-      border-width: 0.6px;
+      border-width: 0.6px;*/
   }
 
   .lien-ext-contenu{
