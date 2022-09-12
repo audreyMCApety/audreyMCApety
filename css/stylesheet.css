@@ -1547,7 +1547,7 @@ cursor: pointer;
     background: url("../img/carto-recherche4.png") no-repeat;
     background-size: 85%;
     background-position: center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
   }
 }
 /* CARTO ------------------------------------------ */
@@ -1886,13 +1886,13 @@ cursor: pointer;
     }
 
     .main .contenu .paragraphe .abstract{
-        font-size: 1.2em;
+        font-size: 1.05em;
         line-height: 1.5em;
         margin: 0;
     }
     .main .contenu .paragraphe .abstract p, .main .contenu .paragraphe .abstract em{
-        font-size: 1.2em;
-        line-height: 1.5em;
+      font-size: 1.05em;
+      line-height: 1.5em;
         margin: 0;
     }
 
@@ -1940,6 +1940,12 @@ cursor: pointer;
         transition: all 0.6s ease-in-out;
     }
 
+    .fiche .ref-fiche{
+        height: 30vh;
+        width: 85vw;
+
+        overflow: auto;
+    }
 
     /* Footer ------------------------------------------------------- */
     .main .contenu .bas-page .trait-bp{
