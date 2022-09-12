@@ -1890,6 +1890,11 @@ cursor: pointer;
         line-height: 1.5em;
         margin: 0;
     }
+    .main .contenu .paragraphe .abstract p, .main .contenu .paragraphe .abstract em{
+        font-size: 1.2em;
+        line-height: 1.5em;
+        margin: 0;
+    }
 
     /* Notes de bas de page ------------------------ -------------*/
     .nbp-second{
