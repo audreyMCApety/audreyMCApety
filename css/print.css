@@ -339,6 +339,7 @@ html, body{
     }
 
     .main .contenu h4{
+      color: var(--mainColor2);
       position: relative;
       display: block;
       page-break-inside: avoid;
@@ -369,6 +370,7 @@ html, body{
     }
 
     .main .contenu h6{
+      color: var(--mainColor);
       position: relative;
       page-break-inside: avoid;
       page-break-after: avoid;
