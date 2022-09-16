@@ -989,10 +989,10 @@ cursor: pointer;
             padding-bottom: 2em;
 
             font-family: var(--textFont);
-            font-weight: 100;
+            font-weight: 300;
             line-height: 150%;
             color: var(--mainColor4);
-            font-size: 0.95em;
+            font-size: 1.1em;
         }
 
         .main .contenu .paragraphe .abstract p{
